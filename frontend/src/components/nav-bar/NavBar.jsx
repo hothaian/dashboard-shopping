@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./Header.css"
+import "./NavBar.css"
 import Head from "../head/Head"
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined"
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 import { Link } from "react-router-dom";
 
-const Header = ({ dark, setMode }) => {
+const NavBar = ({ dark, setMode }) => {
   // Toogle Menu
   const [Mobile, setMobile] = useState(false)
   return (
@@ -33,7 +33,7 @@ const Header = ({ dark, setMode }) => {
                 </Link>
               </li>
               <li>
-                <Link to='/sale' className='navIcon'>
+                <Link to='/add-user' className='navIcon'>
                   <PersonAddIcon className='navIcon active' />
                   AddUser
                 </Link>
@@ -56,7 +56,7 @@ const Header = ({ dark, setMode }) => {
   )
 }
 
-export default Header
+export default NavBar
 
 
 

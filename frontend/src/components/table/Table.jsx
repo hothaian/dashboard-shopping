@@ -4,7 +4,7 @@ import { tokens } from "../../theme";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
-import Header from "./Header";
+import Header from "../Header";
 import axios from 'axios'; 
 import { useState , useEffect} from "react";
 
@@ -81,7 +81,7 @@ const Table = () => {
         if (response.data.length === 0) {
           console.log('Received an empty array from the server.');
         } else {
-          console.log('🚀 ~ Charts ~ chartData:', userData);
+          console.log('Get the User Table Succeed !');
         }
   
       } catch (error) {

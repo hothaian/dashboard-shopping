@@ -19,7 +19,7 @@ const Charts = () => {
       }
     };
     fetchData();
-    console.log("🚀 table :", chartData)
+
   }, []);
 
 

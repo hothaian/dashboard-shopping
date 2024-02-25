@@ -8,9 +8,6 @@ const User = () => {
       <section className='home'>
         <div className='container'>
           <Table/>
-       
-
-
         </div>
       </section>
     </>
