@@ -2,9 +2,13 @@ const { models: { User } } = require('../models');
 const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
+    userAPI: (req, res) => {
+        return res.status(200).send('This is User API');
+    },
+
     getAllUsers: async (req, res) => {
         try {
-            const users = await User.findAll({
+            const users = await User.findAll({  
                 attributes: { exclude: ['password'] }
             });
 
@@ -40,6 +44,8 @@ module.exports = {
                     age,
                     phone,
                     access,
+                    createdAt: '',
+                    updatedAt: ''
                 });
 
                 res.send('User added to the database!');

@@ -5,7 +5,7 @@ const db = require('./models');
 const cors = require('cors');
 const { dataUser } = require('./data'); 
 
-const users = require('./routes/user');
+const userRoute = require('./routes/user');
 
 
 app.use(express.json());
@@ -13,13 +13,8 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-
-app.use('/users', users);
-
-
-
+app.use('/users', userRoute);
 app.use('/static', express.static(path.join(__dirname, 'public')));
-
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
